@@ -1,0 +1,27 @@
+.black_rectangle{
+	height:499px;
+	width:298px;
+	background-color:black ;
+	position: absolute;
+}
+.red{
+	background-color:red;
+	height:150px;
+	width:150px ;
+	border-radius:100px;
+	position: relative;
+}
+.yellow{
+	background-color:yellow;
+	height:150px;
+	width:150px ;
+	border-radius:100px;
+	position: relative;
+}
+.green{
+	background-color:green;
+	height:150px;
+	width:150px ;
+	border-radius:100px;
+	position: relative;
+}
