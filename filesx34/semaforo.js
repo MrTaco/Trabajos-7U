@@ -1,4 +1,4 @@
-function Semaforo(){
+function Semaforo(state){
 	//crear elementos semaforo
 	var black_rectangle_div = document.createElement("div");
 	var red_div = document.createElement("div");
@@ -10,26 +10,33 @@ function Semaforo(){
 	red_div.className="red";
 	yellow_div.className="yellow";
 	green_div.className="green";
-
+	if (state == 1) {
+		red_div.className="red_on";
+	}
+	if (state == 2){
+		green_div.className="green_on";
+	}
+	if (state == 3){
+		yellow_div.className="yellow_on";
+	}
+	if (state >= 3){
+		state = 1;
+	}
 	//agregar elementos a semaforo
 	black_rectangle_div.appendChild(red_div);
 	black_rectangle_div.appendChild(yellow_div);
 	black_rectangle_div.appendChild(green_div);
-
-	//crear un elemento base
-	var app = document.createElement("div");
-	app.className="app";
-
-	//agregar titulo y cuadrado al elemento base
-	app.appendChild(h1Titulo);
-	app.appendChild(divCuadro);
-
-	return app;
+	return black_rectangle_div ;
 }
 
 function render (mountPoint, component, state){
 	mountPoint.appendChild(component(state));
 }
-// obtener la interfaz y "montarla" en el div con id root
 var root = document.getElementById("root");
-render(root, CuadradoCirculo, {x:100, y:700});
+var x = 1;
+var boton = document.getElementById("boton");
+render(root, Semaforo, x);
+
+boton.onclick=function(){
+	render(root, Semaforo, x);
+}

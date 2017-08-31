@@ -4,24 +4,63 @@
 	background-color:black ;
 	position: absolute;
 }
-.red{
+.red_on{
+	opacity: 1.0;
 	background-color:red;
 	height:150px;
 	width:150px ;
 	border-radius:100px;
-	position: relative;
+	left: 70px;
+	position: absolute;
+	top: 5px;
 }
-.yellow{
+.red{
+	opacity: .3;
+	background-color:red;
+	height:150px;
+	width:150px ;
+	border-radius:100px;
+	left: 70px;
+	position: absolute;
+	top: 5px;
+}
+.yellow_on{
+	opacity: 1.0;
 	background-color:yellow;
 	height:150px;
 	width:150px ;
 	border-radius:100px;
-	position: relative;
+	left: 70px;
+	position: absolute;
+	top: 170px;
 }
-.green{
+.yellow{
+	opacity: .3;
+	background-color:yellow;
+	height:150px;
+	width:150px ;
+	border-radius:100px;
+	left: 70px;
+	position: absolute;
+	top: 170px;
+}
+.green_on{
+	opacity: 1.0;
 	background-color:green;
 	height:150px;
 	width:150px ;
 	border-radius:100px;
-	position: relative;
+	left: 70px;
+	position: absolute;
+	top: 235px;
+}
+.green{
+	opacity: .3;
+	background-color:green;
+	height:150px;
+	width:150px ;
+	border-radius:100px;
+	left: 70px;
+	position: absolute;
+	top: 335px;
 }
