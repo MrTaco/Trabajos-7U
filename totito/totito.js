@@ -1,4 +1,4 @@
-function Semaforo(state){
+function totito(state){
 	//crear elementos semaforo
 	var black_rectangle_div = document.createElement("div");
 	var red_div = document.createElement("div");
