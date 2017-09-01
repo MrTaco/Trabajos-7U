@@ -22,6 +22,7 @@ function Semaforo(state){
 	if (state >= 3){
 		state = 1;
 	}
+
 	//agregar elementos a semaforo
 	black_rectangle_div.appendChild(red_div);
 	black_rectangle_div.appendChild(yellow_div);
@@ -37,6 +38,16 @@ var x = 1;
 var boton = document.getElementById("boton");
 render(root, Semaforo, x);
 
-boton.onclick=function(){
+boton.onclick = function(){
+
+	if (x==1){
+		x=2;
+	}
+	else if(x==2) {
+		x=3;
+	}
+	else if(x==3){
+		x=1;
+	}
 	render(root, Semaforo, x);
 }

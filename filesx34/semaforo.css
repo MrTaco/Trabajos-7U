@@ -52,10 +52,11 @@
 	border-radius:100px;
 	left: 70px;
 	position: absolute;
-	top: 235px;
+	top: 335px;
+	
 }
 .green{
-	opacity: .3;
+	opacity: .4;
 	background-color:green;
 	height:150px;
 	width:150px ;
