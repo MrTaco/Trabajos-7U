@@ -1,0 +1,34 @@
+.aventador{
+	width:750px;
+	height:400px;
+}
+.ferrari{
+	width:750px;
+	height:400px;
+}
+.porsche{
+	width:750px;
+	height:400px;
+}
+.huayrabc{
+	width:750px;
+	height:400px;
+}
+li{
+	display: inline;
+	color: white;
+}
+header{
+	background: url(linea.png);
+
+}
+img{
+	width: 50px;
+	height: 60px;
+	margin-left: 120px;
+
+}
+.linea{
+	width: 80px;
+	height: 50px;
+}

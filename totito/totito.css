@@ -1,67 +1,16 @@
-.black_rectangle{
-	height:499px;
-	width:298px;
-	background-color:black ;
-	position: absolute;
+
+.j1{
+	background-image:"x.png";
+	width:25px;
+	height:25px; 
 }
-.red_on{
-	opacity: 1.0;
-	background-color:red;
-	height:150px;
-	width:150px ;
-	border-radius:100px;
-	left: 70px;
-	position: absolute;
-	top: 5px;
+.j2{
+	background-image: "o.png";
+	width:25px;
+	height:25px; 
 }
-.red{
-	opacity: .3;
-	background-color:red;
-	height:150px;
-	width:150px ;
-	border-radius:100px;
-	left: 70px;
-	position: absolute;
-	top: 5px;
-}
-.yellow_on{
-	opacity: 1.0;
-	background-color:yellow;
-	height:150px;
-	width:150px ;
-	border-radius:100px;
-	left: 70px;
-	position: absolute;
-	top: 170px;
-}
-.yellow{
-	opacity: .3;
-	background-color:yellow;
-	height:150px;
-	width:150px ;
-	border-radius:100px;
-	left: 70px;
-	position: absolute;
-	top: 170px;
-}
-.green_on{
-	opacity: 1.0;
-	background-color:green;
-	height:150px;
-	width:150px ;
-	border-radius:100px;
-	left: 70px;
-	position: absolute;
-	top: 335px;
+.tablero{
+	width: 81px;
+	height: 81px;
 	
-}
-.green{
-	opacity: .4;
-	background-color:green;
-	height:150px;
-	width:150px ;
-	border-radius:100px;
-	left: 70px;
-	position: absolute;
-	top: 335px;
 }
