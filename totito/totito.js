@@ -8,6 +8,8 @@ function sumar_horizontal(a){
 	for (var i = 0; i < 3; i++) {
 		suma+=a[i];
 	}
+	return suma;
+}
 function sumar_vertical(b){
 	var suma = 0;
 	for (var i = 0; i < 3; i++) {
@@ -15,13 +17,25 @@ function sumar_vertical(b){
 			suma+=b[j][i];
 		}
 	}
+	return suma;
 }
-function sumar_diagonal(c){
+function sumar_diagonal_1(c){
 	var suma=0;
+	for (var i = 0; i < 3; i++) {
+		suma+=c[i][i];
+	}
 }
+function sumar_diagonal_2(c){
+	var suma=0;
+	var f = 2;
+	for (var i = 0; i < 3; i++) {
+		suma+=c[i][f];
+		f-=1;
+	}
 }
+
 function totito(state){
-	for (var contador_turnos = 0; i < 10; i++) {
+	for (var contador_turnos = 0; contador_turnos < 10; contador_turnos++) {
 		if (state.tiro==1) {
 			var coordenadas_tiro=(0,0);
 		}
@@ -58,7 +72,7 @@ function totito(state){
 			state.turno = true;
 		}
 
-		//verificador 1 horizontal
+		//verificador 1 horizontal J1
 		for (var f = 0; f < 3; f++) {
 			if (sumar_horizontal(lista_tablero[f])==3) {
 				var ganador = document.createElement("h1")
@@ -66,15 +80,23 @@ function totito(state){
 				contador_turnos=10;
 			}
 		}
-		//verificador 2 vertical
+		//verificador 2 vertical J1
 		if (sumar_vertical(lista_tablero)==3) {
 				var ganador = document.createElement("h1")
 				ganador.classname("j1");
 				contador_turnos=10;
+		} 
+		//verificador 3 diagonal izquierda derecha J1
+		if (sumar_diagonal_1(lista_tablero)==3) {
+				var ganador = document.createElement("h1")
+				ganador.classname("j1");
+				contador_turnos=10;
 		}
-		//verificador 3 diagonal
-
-		}
+		//verificador 3 diagonal derecha izquierda J1
+		if (sumar_diagonal_2(lista_tablero)==3) {
+			var ganador = document.createElement("h1")
+			ganador.classname("j1");
+			contador_turnos=10;
 		//agregar elementos a semaforo
 		black_rectangle_div.appendChild(red_div);
 		black_rectangle_div.appendChild(yellow_div);
@@ -108,3 +130,5 @@ boton.onclick = function(){
 	}
 	render(root, Semaforo, x);
 }
+
+//6-19-78
