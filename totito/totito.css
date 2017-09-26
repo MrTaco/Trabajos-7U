@@ -1,16 +1,137 @@
 
-.j1{
-	background-image:"x.png";
-	width:25px;
-	height:25px; 
-}
-.j2{
-	background-image: "o.png";
-	width:25px;
-	height:25px; 
-}
 .tablero{
 	width: 81px;
 	height: 81px;
 	
 }
+.D1{
+	width: 50px;
+	height: 50px;
+	background-color: white;
+}
+.D2{
+	width: 50px;
+	height: 50px;
+	background-color: white;
+}
+.D3{
+	width: 50px;
+	height: 50px;
+	background-color: white;
+}
+.D4{
+	width: 50px;
+	height: 50px;
+	background-color: white;
+}
+.D5{
+	width: 50px;
+	height: 50px;
+	background-color: white;
+}
+.D6{
+	width: 50px;
+	height: 50px;
+	background-color: white;
+}
+.D7{
+	width: 50px;
+	height: 50px;
+	background-color: white;
+}
+.D8{
+	width: 50px;
+	height: 50px;
+	background-color: white;
+}
+.D9{
+	width: 50px;
+	height: 50px;
+	background-color: white;
+}
+.D1x{
+	width: 50px;
+	height: 50px;
+	background: "x.png";
+}
+.D2x{
+	width: 50px;
+	height: 50px;
+	background: "x.png";
+}
+.D3x{
+	width: 50px;
+	height: 50px;
+	background: "x.png";
+}
+.D4x{
+	width: 50px;
+	height: 50px;
+	background: "x.png";
+}
+.D5x{
+	width: 50px;
+	height: 50px;
+	background: "x.png";
+}
+.D6x{
+	width: 50px;
+	height: 50px;
+	background: "x.png";
+}
+.D7x{
+	width: 50px;
+	height: 50px;
+	background: "x.png";
+}
+.D8x{
+	width: 50px;
+	height: 50px;
+	background: "x.png";
+}
+.D9x{
+	width: 50px;
+	height: 50px;
+	background: "x.png";
+}
+.D1o{
+	width: 50px;
+	height: 50px;
+	background: "o.png";
+}
+.D2o{
+	width: 50px;
+	height: 50px;
+	background: "o.png";
+}
+.D3o{
+	width: 50px;
+	height: 50px;
+	background: "o.png";
+}.D4o{
+	width: 50px;
+	height: 50px;
+	background: "o.png";
+}.D5o{
+	width: 50px;
+	height: 50px;
+	background: "o.png";
+}.D6o{
+	width: 50px;
+	height: 50px;
+	background: "o.png";
+}.D7o{
+	width: 50px;
+	height: 50px;
+	background: "o.png";
+}.D8o{
+	width: 50px;
+	height: 50px;
+	background: "o.png";
+}.D9o{
+	width: 50px;
+	height: 50px;
+	background: "o.png";
+}
+
+
