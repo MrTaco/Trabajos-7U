@@ -1,6 +1,41 @@
+.tablero{
+	position: absolute;
+	background-image: url(tablero.png);
+    background-size: cover;
+    height: 150px;
+    width: 150px;
+    z-index:-1;
+}
+.texto_turno{
+	position: absolute;
+	left: 300px;
+	top: 20px;
+}
+.j1{
+	position: absolute;
+	top:20px;
+	left: 390px;
+	height: 50px;
+	width: 	50px;
+	background-image: url(j1.png);
+    background-size: cover;
+}
+.j2{
+	position: absolute;
+	top:20px;
+	left: 390px;
+	height: 50px;
+	width: 	50px;
+	background-image: url(j2.png);
+    background-size: cover;
+}
 .tiro{
 	position: absolute;
 	top: 220px;
+}
+.tablero2{
+	position: absolute;
+	top: 240px;
 }
 .boton{
 	position: absolute;
@@ -10,11 +45,6 @@
 .ingrese{
 	position: absolute;
 	top: 200px;
-}
-.tablero{
-	width: 81px;
-	height: 81px;
-	
 }
 .D1{
 	width: 50px;
@@ -35,7 +65,7 @@
 	height: 50px;
 	position: absolute;
 	left: 102px;
-	background-color: white;
+	background-color:white;
 }
 .D4{
 	width: 50px;
@@ -91,15 +121,16 @@
 	position: absolute;
 	left: 0px;
 	top: 0px;
-	background: "x.png";
-}
+	background-image: url(x.png);
+    background-size: cover;}
 .D2x{
 	width: 50px;
 	height: 50px;
 	position: absolute;
 	left: 51px;
 	top: 0px;
-	background: "x.png";
+	background-image: url(x.png);
+    background-size: cover;
 }
 .D3x{
 	width: 50px;
@@ -107,7 +138,8 @@
 	position: absolute;
 	left: 102px;
 	top: 0px;
-	background: "x.png";
+	background-image: url(x.png);
+    background-size: cover;
 }
 .D4x{
 	width: 50px;
@@ -115,7 +147,8 @@
 	position: absolute;
 	left: 0px;
 	top: 51px;
-	background: "x.png";
+	background-image: url(x.png);
+    background-size: cover;
 }
 .D5x{
 	width: 50px;
@@ -123,7 +156,8 @@
 	position: absolute;
 	left: 51px;
 	top: 51px;
-	background: "x.png";
+	background-image: url(x.png);
+    background-size: cover;
 }
 .D6x{
 	width: 50px;
@@ -131,7 +165,8 @@
 	position: absolute;
 	left: 102px;
 	top: 51px;
-	background: "x.png";
+	background-image: url(x.png);
+    background-size: cover;
 }
 .D7x{
 	width: 50px;
@@ -139,7 +174,8 @@
 	position: absolute;
 	left: 0px;
 	top: 102px;
-	background: "x.png";
+	background-image: url(x.png);
+    background-size: cover;
 }
 .D8x{
 	width: 50px;
@@ -147,15 +183,17 @@
 	position: absolute;
 	left: 51px;
 	top: 102px;
-	background: "x.png";
+	background-image: url(x.png);
+    background-size: cover;
 }
 .D9x{
 	width: 50px;
 	height: 50px;
 	position: absolute;
-	left: 102px;
-	top: 102px;
-	background: "x.png";
+	left: 110px;
+	top: 110px;
+	background-image: url(x.png);
+    background-size: cover;
 }
 .D1o{
 	width: 50px;
@@ -163,7 +201,8 @@
 	position: absolute;
 	left: 0px;
 	top: 0px;
-	background: "o.png";
+	background-image: url(o.png);
+    background-size: cover;
 }
 .D2o{
 	width: 50px;
@@ -171,7 +210,8 @@
 	position: absolute;
 	left: 51px;
 	top: 0px;
-	background: "o.png";
+	background-image: url(o.png);
+    background-size: cover;
 }
 .D3o{
 	width: 50px;
@@ -179,7 +219,8 @@
 	position: absolute;
 	left: 102px;
 	top: 0px;
-	background: "o.png";
+	background-image: url(o.png);
+    background-size: cover;
 }
 .D4o{
 	width: 50px;
@@ -187,7 +228,8 @@
 	position: absolute;
 	left: 0px;
 	top: 51px;
-	background: "o.png";
+	background-image: url(o.png);
+    background-size: cover;
 }
 .D5o{
 	width: 50px;
@@ -195,7 +237,8 @@
 	position: absolute;
 	left: 51px;
 	top: 51px;
-	background: "o.png";
+	background-image: url(o.png);
+    background-size: cover;
 }
 .D6o{
 	width: 50px;
@@ -203,7 +246,8 @@
 	position: absolute;
 	left: 102px;
 	top: 51px;
-	background: "o.png";
+	background-image: url(o.png);
+    background-size: cover;
 }
 .D7o{
 	width: 50px;
@@ -211,7 +255,8 @@
 	position: absolute;
 	left: 0px;
 	top: 102px;
-	background: "o.png";
+	background-image: url(o.png);
+    background-size: cover;
 }
 .D8o{
 	width: 50px;
@@ -219,13 +264,15 @@
 	position: absolute;
 	left: 51px;
 	top: 102px;
-	background: "o.png";
+	background-image: url(o.png);
+    background-size: cover;
 }
 .D9o{
 	width: 50px;
 	height: 50px;
 	position: absolute;
-	left: 102px;
-	top: 102px;
-	background: "o.png";
+	left: 110px;
+	top: 110px;
+	background-image: url(o.png);
+    background-size: cover;
 }

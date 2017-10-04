@@ -1,6 +1,4 @@
-var tablero = document.getElementById("tablero");
-var j1 = document.createElement("div");
-var j2 = document.createElement("div");
+
 var boton = document.getElementById("boton");
 var lista_tablero = [[0,0,0],[0,0,0],[0,0,0]];
 var d1 = document.getElementById("D1");
@@ -12,6 +10,7 @@ var d6 = document.getElementById("D6");
 var d7 = document.getElementById("D7");
 var d8 = document.getElementById("D8");
 var d9 = document.getElementById("D9");
+var turno_html = document.getElementById("turno");
 function sumar_horizontal(a){
 	var suma = 0;
 	for (var i = 0; i < 3; i++) {
@@ -19,20 +18,20 @@ function sumar_horizontal(a){
 	}
 	return suma;
 }
-function sumar_vertical(b){
+function sumar_vertical(lista, i){
 	var suma = 0;
-	for (var i = 0; i < 3; i++) {
-		for (var j = 0; j < 3; j++) {
-			suma+=b[j][i];
-		}
+	for (var j = 0; j <= 2; j++) {
+		suma += lista[j][i];
+		
 	}
-	return suma;
+	return suma
 }
 function sumar_diagonal_1(c){
 	var suma=0;
 	for (var i = 0; i < 3; i++) {
 		suma+=c[i][i];
 	}
+	return suma
 }
 function sumar_diagonal_2(c){
 	var suma=0;
@@ -41,12 +40,12 @@ function sumar_diagonal_2(c){
 		suma+=c[i][f];
 		f-=1;
 	}
+	return suma
 }
 
-function Crear_tablero(state){
+function Renombrar_elementos(state){
 	if (state.tiro==1 && state.lista_tablero[0][0]==0) {
-		var coordenadas_tiro=(0,0);
-		state.tiro_usado1=true; 
+		var coordenadas_tiro=[0,0];
 		if (state.turno==true){
 			d1.className="D1x";
 		}
@@ -55,161 +54,157 @@ function Crear_tablero(state){
 		}
 	}
 	else if (state.tiro==2 && state.lista_tablero[0][1]==0) {
-		var coordenadas_tiro=(0,1);
-		state.tiro_usado2=true;
+		var coordenadas_tiro=[0,1];
+		
 
 		if (state.turno==true){
 			d2.className="D2x";
 		}
 		else if (state.turno==false){
-			d2.classname("D2o");
+			d2.className="D2o";
 		}
 	}
 	else if (state.tiro==3 && state.lista_tablero[0][2]==0) {
-		var coordenadas_tiro=(0,2);
-		state.tiro_usado3=true;
+		var coordenadas_tiro=[0,2];
+		
 
 		if (state.turno==true){
-			D3.classname("D3x");
+			d3.className="D3x";
 		}
 		else if (state.turno==false){
-			D3.classname("D3o");
+			d3.className="D3o";
 		}
 	}
 	else if (state.tiro==4 && state.lista_tablero[1][0]==0) {
-		var coordenadas_tiro=(1,0);
-		state.tiro_usado4=true;
+		var coordenadas_tiro=[1,0];
+		
 
 		if (state.turno==true){
-			D4.classname("D4x");
+			d4.className="D4x";
 		}
 		else if (state.turno==false){
-			D4.classname("D4o");
+			d4.className="D4o";
 		}
 	}
 	else if (state.tiro==5 && state.lista_tablero[1][1]==0) {
-		var coordenadas_tiro=(1,1);
-		state.tiro_usado5=true;
+		var coordenadas_tiro=[1,1];
+		
 
 		if (state.turno==true){
-			D5.classname("D5x");
+			d5.className="D5x";
 		}
 		else if (state.turno==false){
-			D5.classname("D5o");
+			d5.className="D5o";
 		}
 	}
 	else if (state.tiro==6 && state.lista_tablero[1][2]==0) {
-		var coordenadas_tiro=(1,2);
-		state.tiro_usado6=true;
+		var coordenadas_tiro=[1,2];
+		
 
 		if (state.turno==true){
-			D6.classname("D6x");
+			d6.className="D6x";
 		}
 		else if (state.turno==false){
-			D6.classname("D6o");
+			d6.className="D6o";
 		}
 	}
 	else if (state.tiro==7 && state.lista_tablero[2][0]==0) {
-		var coordenadas_tiro=(2,0);
-		state.tiro_usado7=true;
+		var coordenadas_tiro=[2,0];
+		
 
 		if (state.turno==true){
-			D7.classname("D7x");
+			d7.className="D7x";
 		}
 		else if (state.turno==false){
-			D7.classname("D7o");
+			d7.className="D7o";
 		}
 	}
 	else if (state.tiro==8 && state.lista_tablero[2][1]==0) {
-		var coordenadas_tiro=(2,1);
-		state.tiro_usado8=true;
+		var coordenadas_tiro=[2,1];
+		
 
 		if (state.turno==true){
-			D8.classname("D8x");
+			d8.className="D8x";
 		}
 		else if (state.turno==false){
-			D8.classname("D8o");
+			d8.className="D8o";
 		}
 	}
 	else if (state.tiro==9 && state.lista_tablero[2][2]==0) {
-		var coordenadas_tiro=(2,2);
-		state.tiro_usado9=true;	
+		var coordenadas_tiro=[2,2];
+		
 
 		if (state.turno==true){
-			D9.className="D9x";
+			d9.className="D9x";
 		}
 		else if (state.turno==false){
-			D9.classname("D9o");
+			d9.className="D9o";
 		}
 	}
 	else{
-		alert("Tiro ya utilizado")
+		alert("Tiro ya utilizado");
 	}
+
 
 	if (state.turno == true) {
-		state.lista_tablero[coordenadas_tiro[0]][coordenadas_tiro[1]].push(1);
-		state.turno = false;
+		state.lista_tablero[coordenadas_tiro[0]][coordenadas_tiro[1]]=1;
+
 	}
 	else if (state.turno == false) {
-		state.lista_tablero[coordenadas_tiro[0]][coordenadas_tiro[1]].push(5);
-		state.turno = true;
+		state.lista_tablero[coordenadas_tiro[0]][coordenadas_tiro[1]]=5;
+		
 	}
-
-		//verificador 1 horizontal J1
+	//verificador 1 horizontal J1
 	for (var f = 0; f < 3; f++) {
-		if (sumar_horizontal(lista_tablero[f])==3) {
-			var ganador = document.createElement("h1");
-			ganador.classname("jugador1");
-			contador_turnos=10;
+		if (sumar_horizontal(state.lista_tablero[f])==3) {
+			alert("Ganador J1");
 		}
 	}
 		//verificador 2 vertical J1
-	if (sumar_vertical(lista_tablero)==3) {
-			var ganador = document.createElement("h1");
-			ganador.classname("jugador1");
-			contador_turnos=10;
-	} 
+	for (var i = 0; i <= 2; i++) {
+		if (sumar_vertical(state.lista_tablero, i)==3) {
+			alert("Ganador J1");
+		} 
+	}
+
 		//verificador 3 diagonal izquierda derecha J1
-	if (sumar_diagonal_1(lista_tablero)==3) {
-			var ganador = document.createElement("h1");
-			ganador.classname("jugador1");
-			contador_turnos=10;
+	if (sumar_diagonal_1(state.lista_tablero)==3) {	
+			alert("Ganador J1");
 	}
 		//verificador 3 diagonal derecha izquierda J1
-	if (sumar_diagonal_2(lista_tablero)==3) {
-		var ganador = document.createElement("h1");
-		ganador.classname("jugador1");
-		contador_turnos=10;
+	if (sumar_diagonal_2(state.lista_tablero)==3) {
+		alert("Ganador J1");
 	}
 		//verificador 1 horizontal J2
 	for (var f = 0; f < 3; f++) {
-		if (sumar_horizontal(lista_tablero[f])==15) {
-			var ganador = document.createElement("h1");
-			ganador.classname("jugador2");
-			contador_turnos=10;
+		if (sumar_horizontal(state.lista_tablero[f])==15) {
+			
+			
+			alert("Ganador J2");
 			}
 	}
 		//verificador 2 vertical J2
-	if (sumar_vertical(lista_tablero)==15) {
-			var ganador = document.createElement("h1");
-			ganador.classname("jugador2");
-			contador_turnos=10;
-	} 
+	for (var i = 0; i <= 2; i++) {
+		if (sumar_vertical(state.lista_tablero, i)==15) {
+			alert("Ganador J2");
+		} 
+	}
 		//verificador 3 diagonal izquierda derecha J2
-	if (sumar_diagonal_1(lista_tablero)==15) {
-			var ganador = document.createElement("h1");
-			ganador.classname("jugador2");
-			contador_turnos=10;
+	if (sumar_diagonal_1(state.lista_tablero)==15) {
+			
+			
+			alert("Ganador J2");
 	}
 		//verificador 3 diagonal derecha izquierda J2
-	if (sumar_diagonal_2(lista_tablero)==15) {
-		var ganador = document.createElement("h1");
-		ganador.classname("jugador2");
-		contador_turnos=10;
+	if (sumar_diagonal_2(state.lista_tablero)==15) {
+	
+		
+		alert("Ganador J2");
 	}
-	var turno = state.turno;
-		//agregar elementos a semaforo
-	return D1, D2, D3, D4, D5, D6, D7, D8, D9, turno
+
+	
+	
+	return D1, D2, D3, D4, D5, D6, D7, D8, D9
 }
 	
 
@@ -220,9 +215,17 @@ function render (mountPoint, component, state){
 }
 
 boton.onclick = function(){
-	
+	if (turno == true){
+		turno = false;
+		turno_html.className="j1";
+	}
+	else{
+		turno = true;
+		turno_html.className="j2";
+	}
 	var tiro = document.getElementById("tiro");
-	var state={"turno": turno, "tiro": tiro, "lista_tablero": lista_tablero};
+	var state = {"turno": turno, "tiro": tiro.value, "lista_tablero": lista_tablero};
+	render(root, Renombrar_elementos, state);
 
 }
 
